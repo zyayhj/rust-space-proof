@@ -1,0 +1,28 @@
+[package]
+name = "rust-miximus"
+version = "0.1.0"
+authors = ["drewstone <drewstone329@gmail.com>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ring = "0.16.15"
+sapling-crypto = { path = "./sapling-crypto" }
+pairing = { path = "./pairing" }
+ff = { path = './ff', features = ["derive"] }
+blake2-rfc = "0.2.18"
+bellman = { path = "./bellman" }
+rand = "0.4"
+hex = "0.3.2"
+serde = "1.0.80"
+serde_derive = "1.0.80"
+serde_json = "1.0.33"
+num-bigint = "0.2.2"
+num-traits = "0.2"
+time = "0.1"
+protobuf     = { version = "2.16.2",  optional = true }
+
+[dependencies.wasm-bindgen]
+version = "0.2.33"
+features = ["serde-serialize"]
